@@ -1,0 +1,128 @@
+
+/*----------------------------Header----------------------------------*/
+.navbar{
+    background-color: rgb(216, 220, 198) !important;
+}
+
+.btn-img{
+    width: 30%;
+    border: 0.01px solid black; 
+    display: inline-block; 
+    border-radius: 10px; 
+    padding: 5px; 
+    text-align: center;
+}
+
+.botones-separados{
+    
+}
+
+.btn{
+    margin-bottom: 5px;
+    background-color: white;
+    color: blue;
+          
+}
+
+/*----------------------------Body----------------------------------*/
+
+body {
+    font-family: Arial, sans-serif;
+    
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f5f5f5;
+  }
+
+  .container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(216, 220, 198)6;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }
+
+ 
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* width: 100%;
+    margin-bottom: 20px; */
+  }
+
+  .category-sockets {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .category-sockets label {
+    margin-right: 10px;
+  }
+
+  .search-box {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .search-icon {
+    margin-right: 10px;
+  }
+
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+  }
+
+  .card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .card-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .card-description {
+    margin-bottom: 10px;
+  }
+
+  .card-price {
+    font-weight: bold;
+    color: #e53935;
+  }
+
+  .details-button {
+    background-color: #1976D2;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+
+/*----------------------------Footer----------------------------------*/
+.d-flex{
+    font-weight: bold;
+    
+    /* color: blue !important; */
+    background-color: rgb(216, 220, 198) !important;
+}

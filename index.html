@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/images/favicon.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Amazing Events</title>
+</head>
+
+<body>
+
+     <header>
+          <nav class="navbar bg-body-tertiary">
+              <div class="container-fluid justify-content-between">
+                 <a href="index.html">
+                    <img src="./assets/images/amazing_brand.png" alt="Main button" class="btn-img">
+                 </a>
+                  <div class="botones-separados">
+                    <a href="./assets/pages/upcoming-event.html" class="btn btn-sm btn-outline-secondary">Upcoming
+                        Events</a>
+                    <a href="./assets/pages/past-events.html" class="btn btn-sm btn-outline-secondary">Past Events</a>
+                    <a href="./assets/pages/contact.html" class="btn btn-sm btn-outline-secondary">Contact</a>
+                    <a href="./assets/pages/stats.html" class="btn btn-sm btn-outline-secondary">Stats</a>
+                 </div>
+                </div>
+         </nav>
+
+         <div id="carouselExampleCaptions" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+                    aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./assets/images/optional_banner_1.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Home</h5>
+                        <p>Nuestros servicios son.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./assets/images/optional_banner_2.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Upcoming-Event</h5>
+                        <p>Nuestros servicios son.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./assets/images/optional_banner_3.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Past Event</h5>
+                        <p>Nuestros servicios son.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./assets/images/optional_banner_4.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Contact</h5>
+                        <p>Nuestros servicios son.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./assets/images/optional_banner_5.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Stats</h5>
+                        <p>Nuestros servicios son.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+         </div>
+     </header>
+    
+      <main>
+
+        <div class="container">
+            <div class="header">
+              <div class="category-sockets">
+                
+                <label for="categoria1"><input type="checkbox" name="categoria" id="categoria1"> Categoría 1</label>
+                <label for="categoria2"><input type="checkbox" name="categoria" id="categoria2"> Categoría 2</label>
+                <label for="categoria3"><input type="checkbox" name="categoria" id="categoria3"> Categoría 3</label>
+                <label for="categoria4"><input type="checkbox" name="categoria" id="categoria4"> Categoría 4</label>
+                <label for="categoria5"><input type="checkbox" name="categoria" id="categoria5"> Categoría 5</label>
+                <div class="search-box">
+                    <span class="search-icon">&#128269;</span>
+                    <input type="text" placeholder="Buscar...">
+                  </div>
+              </div>
+
+              
+
+            </div>
+            <div class="cards-container">
+              <div class="card">
+                <img src="./assets/images/books.png" alt="Imagen 1">
+                <h2 class="card-title">Título del Producto 1</h2>
+                <p class="card-description">Descripción del Producto 1</p>
+                <p class="card-price">$1</p>
+                <button class="details-button">Detalles</button>
+              </div>
+              <div class="card">
+                <img src="./assets/images/cinema.png" alt="Imagen 2">
+                <h2 class="card-title">Título del Producto 2</h2>
+                <p class="card-description">Descripción del Producto 2</p>
+                <p class="card-price">$1</p>
+                <button class="details-button">Detalles</button>
+              </div>
+              <div class="card">
+                <img src="./assets/images/costume_party.png" alt="Imagen 3">
+                <h2 class="card-title">Título del Producto 3</h2>
+                <p class="card-description">Descripción del Producto 3</p>
+                <p class="card-price">$1</p>
+                <button class="details-button">Detalles</button>
+              </div>
+              <div class="card">
+                <img src="./assets/images/music_concert.png" alt="Imagen 4">
+                <h2 class="card-title">Título del Producto 4</h2>
+                <p class="card-description">Descripción del Producto 4</p>
+                <p class="card-price">$1</p>
+                <button class="details-button">Detalles</button>
+              </div>
+            </div>
+        </div>
+
+      </main>
+
+     <!-- <div class="container"> -->
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+
+            <div>
+                <a href="https://facebook.com"><img src="assets/images/facebook.png" alt="Facebook" ></a>
+                <a href="https://wa.me/1234567890"><img src="assets/images/whatsapp.png" alt="Twitter" ></a>
+                <a href="https://instagram.com"><img src="assets/images/instagram.png" alt="Instagram" ></a>
+            </div>
+
+            <p class="col-md-4 mb-0 text-body-secondary">&copy; 2023 Cohort AP Desarrollo Web 03 TN, Marcos Sagula Inc
+            </p>
+
+            <ul class="nav col-md-4 justify-content-end">
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+                <li class="nav-item"><a href="./assets/pages/upcoming-events.html"
+                        class="nav-link px-2 text-body-secondary">Upcoming Events</a></li>
+                <li class="nav-item"><a href="./assets/pages/past-events.html"
+                        class="nav-link px-2 text-body-secondary">Past Events</a></li>
+                <li class="nav-item"><a href="./assets/pages/contact.html"
+                        class="nav-link px-2 text-body-secondary">Contact</a></li>
+                <li class="nav-item"><a href="./assets/pages/stats.html"
+                        class="nav-link px-2 text-body-secondary">Stats</a></li>
+            </ul>
+
+        </footer>
+     <!-- </div> -->
+
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
