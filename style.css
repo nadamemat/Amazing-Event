@@ -13,9 +13,7 @@
     text-align: center;
 }
 
-.botones-separados{
-    
-}
+
 
 .btn{
     margin-bottom: 5px;
@@ -24,91 +22,92 @@
           
 }
 
+.carousel-inner img {
+  max-width: 100%;
+  max-height: 300px; /* Ajusta la altura máxima deseada para las imágenes */
+  width: auto;
+  height: auto;
+}
+
+
+@media (max-width: 767px) {
+  .carousel-inner img {
+      height: 200px; /* Ajusta la altura deseada para dispositivos pequeños */
+  }
+}
+
+.search{
+  display: grid;
+  justify-content: center;
+}
+
+
 /*----------------------------Body----------------------------------*/
 
 body {
     font-family: Arial, sans-serif;
-    
+    background-color: rgb(216, 220, 198) !important; 
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #f5f5f5;
+    
   }
 
   .container {
-    width: 80%;
+    background-color: #f5f5f5;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(216, 220, 198)6;
+    background-color: rgb(216, 220, 198);
     padding: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   }
-
- 
-
-  .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    /* width: 100%;
-    margin-bottom: 20px; */
-  }
-
-  .category-sockets {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .category-sockets label {
-    margin-right: 10px;
-  }
-
-  .search-box {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-
-  .search-icon {
-    margin-right: 10px;
-  }
-
+  
   .cards-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 100%;
+    gap: 20px; /* Agregamos espaciado entre las tarjetas */
   }
-
+  
   .card {
     border: 1px solid #ccc;
     padding: 15px;
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
   }
-
+  
   .card img {
     max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
+    height: 100%; /* Las imágenes ocuparán todo el espacio vertical disponible */
+    object-fit: cover; /* Las imágenes mantendrán su relación de aspecto y se recortarán si es necesario */
   }
-
+  
+  .card-content {
+    flex-grow: 1; /* Permite que el contenido ocupe el espacio restante en la tarjeta */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
   .card-title {
     font-weight: bold;
     margin-bottom: 5px;
   }
-
+  
   .card-description {
     margin-bottom: 10px;
   }
-
+  
   .card-price {
     font-weight: bold;
     color: #e53935;
   }
-
+  
   .details-button {
     background-color: #1976D2;
     color: #fff;
@@ -117,12 +116,17 @@ body {
     border-radius: 5px;
     cursor: pointer;
   }
-
+  
+  
 
 /*----------------------------Footer----------------------------------*/
-.d-flex{
+.footer{
     font-weight: bold;
-    
-    /* color: blue !important; */
     background-color: rgb(216, 220, 198) !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+   
 }
+
