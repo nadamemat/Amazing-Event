@@ -9,7 +9,7 @@
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="../../style.css">
 
-    <title>Past - Amazing Events</title>
+    <title>Show-data - Amazing Events</title>
 </head>
 
 <body>
@@ -22,8 +22,8 @@
                 </a>
                 <div class="botones-separados">
                     <a href="../pages/upcoming-events.html" class="btn btn-sm btn-outline-secondary">Upcoming Events</a>
-                    <a href="#" class="SoloTexto">Past Events</a>
-                    <a href="../pages/contact.html" class="btn btn-sm btn-outline-secondary">Contact</a>
+                    <a href="../pages/past-events.html" class="btn btn-sm btn-outline-secondary">Past Events</a>
+                    <a href="#" class="SoloTexto">Contact</a>
                     <a href="../pages/stats.html" class="btn btn-sm btn-outline-secondary">Stats</a>
                 </div>
             </div>
@@ -124,95 +124,77 @@
                 </form>
             </div>
         </div>
-        <h1 class="title">Past Events</h1>
+        <h1 class="title">Contact</h1>
     </header>
 
     <main>
-       
-            <div class="container mt-5">
-                <div class="row">
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card">
-                            <img src="../images/cancelled.png" class="card-img-top" alt="Event 5">
-                            <div class="card-body">
-                                <h5 class="card-title">Miley's Bunker</h5>
-                                <p class="card-text">Meet and greet in Miley's bunker</p>
-                                <p class="card-text">Price: $100</p>
-                                <a href="#" class="btn btn-primary">Details</a>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card">
-                            <img src="../images/cancelled.png" class="card-img-top" alt="Event 6">
-                            <div class="card-body">
-                                <h5 class="card-title">Larreta's Bunker</h5>
-                                <p class="card-text">Meet and greet in Larreta's bunker</p>
-                                <p class="card-text">Price: $100</p>
-                                <a href="#" class="btn btn-primary">Details</a>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card">
-                            <img src="../images/cancelled.png" class="card-img-top" alt="Event 7">
-                            <div class="card-body">
-                                <h5 class="card-title">Bullrich's Bunker</h5>
-                                <p class="card-text">Meet and greet in Bullrich's bunkers</p>
-                                <p class="card-text">Price: $100</p>
-                                <a href="#" class="btn btn-primary">Details</a>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card">
-                            <img src="../images/cancelled.png" class="card-img-top" alt="Event 8">
-                            <div class="card-body">
-                                <h5 class="card-title">Massa's Bunker</h5>
-                                <p class="card-text">Meet and greet in Massa's bunker</p>
-                                <p class="card-text">Price: $100</p>
-                                <a href="#" class="btn btn-primary">Details</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="container mt-4">
+            <h1>Submitted Data</h1>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Message</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="nameData"></td>
+                        <td id="emailData"></td>
+                        <td id="messageData"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="../pages/contact.html" class="btn btn-primary">Back to Contact</a>
+        </div>
+    
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const nameData = document.getElementById("nameData");
+                const emailData = document.getElementById("emailData");
+                const messageData = document.getElementById("messageData");
+    
+                const formData = JSON.parse(localStorage.getItem("formData"));
+    
+                if (formData) {
+                    nameData.textContent = formData.name;
+                    emailData.textContent = formData.email;
+                    messageData.textContent = formData.message;
+                }
+            });
+        </script>
+
+
+  
 
     </main>
-        
-
-        
-    
 
     <!-- TENGO QUE PONERLE GRID EN MOBILE PARA QUE NO ROMPA SCROLL LATERAL Y NO QUEDE FEO -->
     <footer class="footer">
-       
-            <div class="social-links">
-            
-                <a href="https://facebook.com"><img src="../images/facebook.png" alt="Facebook"></a>
-                <a href="https://wa.me/1234567890"><img src="../images/whatsapp.png" alt="Twitter"></a>
-                <a href="https://instagram.com"><img src="../images/instagram.png" alt="Instagram"></a>
-             
-                <p class="text-body-secondary">&copy; 2023 Cohort AP Desarrollo Web 03 TN, Marcos Sagula Inc</p>
-            
-            </div>
-             
-        
-            <ul class="link-list">
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
-                <li class="nav-item"><a href="../pages/upcoming-events.html"
-                        class="nav-link px-2 text-body-secondary">Upcoming Events</a></li>
-                <li class="nav-item"><a href="../pages/past-events.html"
-                        class="nav-link px-2 text-body-secondary">Past Events</a></li>
-                <li class="nav-item"><a href="../pages/contact.html"
-                        class="nav-link px-2 text-body-secondary">Contact</a></li>
-                <li class="nav-item"><a href="../pages/stats.html"
-                        class="nav-link px-2 text-body-secondary">Stats</a></li>
-            </ul>
-        
+
+        <div class="social-links">
+
+            <a href="https://facebook.com"><img src="../images/facebook.png" alt="Facebook"></a>
+            <a href="https://wa.me/1234567890"><img src="../images/whatsapp.png" alt="Twitter"></a>
+            <a href="https://instagram.com"><img src="../images/instagram.png" alt="Instagram"></a>
+
+            <p class="text-body-secondary">&copy; 2023 Cohort AP Desarrollo Web 03 TN, Marcos Sagula Inc</p>
+
+        </div>
+
+
+        <ul class="link-list">
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+            <li class="nav-item"><a href="../pages/upcoming-events.html"
+                    class="nav-link px-2 text-body-secondary">Upcoming Events</a></li>
+            <li class="nav-item"><a href="../pages/past-events.html" class="nav-link px-2 text-body-secondary">Past
+                    Events</a></li>
+            <li class="nav-item"><a href="../pages/contact.html" class="nav-link px-2 text-body-secondary">Contact</a>
+            </li>
+            <li class="nav-item"><a href="../pages/stats.html" class="nav-link px-2 text-body-secondary">Stats</a></li>
+        </ul>
+
     </footer>
 
 
