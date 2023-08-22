@@ -1,8 +1,8 @@
-
 /*----------------------------Header----------------------------------*/
-.navbar{
-    background-color: rgb(216, 220, 198) !important;
+.navbar {
+  background-color: rgb(216, 220, 198) !important;
 }
+
 
 /*Boton de pagina actual de otro color*/
 .SoloTexto {
@@ -14,27 +14,28 @@
   border-radius: 5px;
 }
 
-.btn-img{
-    width: 30%;
-    border: 0.01px solid black; 
-    display: inline-block; 
-    border-radius: 10px; 
-    padding: 5px; 
-    text-align: center;
+.btn-img {
+  width: 30%;
+  border: 0.01px solid black;
+  display: inline-block;
+  border-radius: 10px;
+  padding: 5px;
+  text-align: center;
 }
 
 
 
-.btn{
-    margin-bottom: 5px;
-    background-color: white;
-    color: blue;
-          
+.btn {
+  margin-bottom: 5px;
+  background-color: white;
+  color: blue;
+
 }
 
 .carousel-inner img {
   max-width: 100%;
-  max-height: 300px; /* Ajusta la altura máxima deseada para las imágenes */
+  max-height: 300px;
+  /* Ajusta la altura máxima deseada para las imágenes */
   width: auto;
   height: auto;
 }
@@ -42,114 +43,127 @@
 
 @media (max-width: 767px) {
   .carousel-inner img {
-      height: 200px; /* Ajusta la altura deseada para dispositivos pequeños */
+    height: 200px;
+    /* Ajusta la altura deseada para dispositivos pequeños */
   }
 }
 
-.search{
+.search {
   display: grid;
   justify-content: center;
   background-color: rgb(216, 220, 198) !important;
 }
 
-.title{
-  font-size: 24px; /* Tamaño de la fuente */
-  color: #333;    /* Color del texto */
-  text-align: center; /* Alineación del texto */
-  background-color: #f0f0f0; /* Color de fondo */
-  padding: 10px;   /* Espacio interno alrededor del contenido */
-  border: 1px solid #ccc; /* Borde */
-  border-radius: 8px; /* Radio del borde */
-  margin-top: 20px; /* Margen superior */
+.title {
+  font-size: 24px;
+  /* Tamaño de la fuente */
+  color: #333;
+  /* Color del texto */
+  text-align: center;
+  /* Alineación del texto */
+  background-color: #f0f0f0;
+  /* Color de fondo */
+  padding: 10px;
+  /* Espacio interno alrededor del contenido */
+  border: 1px solid #ccc;
+  /* Borde */
+  border-radius: 8px;
+  /* Radio del borde */
+  margin-top: 20px;
+  /* Margen superior */
 }
 
 /*----------------------------Body----------------------------------*/
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: rgb(244, 245, 241) !important; 
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    
-  }
+  font-family: Arial, sans-serif;
+  background-color: rgb(244, 245, 241) !important;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 
-  .container {
-    background-color: #f5f5f5;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-    padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  .cards-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    max-width: 100%;
-    gap: 20px; /* Agregamos espaciado entre las tarjetas */
-    
-  }
-  
-  .card {
-    border: 1px solid #ccc;
-    padding: 15px;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-  }
-  
-  .card img {
-    max-width: 100%;
-    height: 100%; /* Las imágenes ocuparán todo el espacio vertical disponible */
-    object-fit: cover; /* Las imágenes mantendrán su relación de aspecto y se recortarán si es necesario */
-  }
-  
-  .card-content {
-    flex-grow: 1; /* Permite que el contenido ocupe el espacio restante en la tarjeta */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  
-  .card-title {
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  .card-description {
-    margin-bottom: 10px;
-  }
-  
-  .card-price {
-    font-weight: bold;
-    color: #e53935;
-  }
-  
-  .details-button {
-    background-color: #1976D2;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  
+}
+
+.container {
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 100%;
+  gap: 20px;
+  /* Agregamos espaciado entre las tarjetas */
+
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.card img {
+  max-width: 100%;
+  height: 100%;
+  /* Las imágenes ocuparán todo el espacio vertical disponible */
+  object-fit: cover;
+  /* Las imágenes mantendrán su relación de aspecto y se recortarán si es necesario */
+}
+
+.card-content {
+  flex-grow: 1;
+  /* Permite que el contenido ocupe el espacio restante en la tarjeta */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.card-description {
+  margin-bottom: 10px;
+}
+
+.card-price {
+  font-weight: bold;
+  color: #e53935;
+}
+
+.details-button {
+  background-color: #1976D2;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
 
 /*----------------------------Footer----------------------------------*/
-.footer{
-    font-weight: bold;
-    background-color: rgb(216, 220, 198) !important;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-   
+.footer {
+  font-weight: bold;
+  background-color: rgb(216, 220, 198) !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+
 }
 
 /*----------------------------ContactUS----------------------------------*/
@@ -158,4 +172,34 @@ body {
   padding: 20px;
   border-radius: 5px;
   margin: 20px 0;
+}
+
+/*----------------------------Stats----------------------------------*/
+.main-table {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-height: 1vh;
+
+}
+
+/* 
+.table-stats {
+ 
+
+  border: 1rem ; 
+  
+} */
+
+.table-stats th,
+td {
+  border: 1px solid;
+
+
+
+}
+
+.table-stats th {
+  background-color: gray;
 }
