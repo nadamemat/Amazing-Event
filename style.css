@@ -75,7 +75,7 @@
 
 /*----------------------------Body----------------------------------*/
 
-body {
+/* body {
   font-family: Arial, sans-serif;
   background-color: rgb(244, 245, 241) !important;
   justify-content: center;
@@ -83,9 +83,9 @@ body {
   height: 100vh;
   margin: 0;
 
-}
+} */
 
-.container {
+/* .container {
   background-color: #f5f5f5;
   display: flex;
   flex-direction: column;
@@ -102,9 +102,9 @@ body {
   gap: 20px;
   /* Agregamos espaciado entre las tarjetas */
 
-}
+/* } */
 
-.card {
+/* .card {
   border: 1px solid #ccc;
   padding: 15px;
   border-radius: 5px;
@@ -118,14 +118,14 @@ body {
   max-width: 100%;
   height: 100%;
   /* Las imágenes ocuparán todo el espacio vertical disponible */
-  object-fit: cover;
+  /* object-fit: cover; */
   /* Las imágenes mantendrán su relación de aspecto y se recortarán si es necesario */
-}
+/* } */
 
-.card-content {
-  flex-grow: 1;
+/* .card-content {
+  flex-grow: 1; */
   /* Permite que el contenido ocupe el espacio restante en la tarjeta */
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -151,7 +151,7 @@ body {
   padding: 5px 10px;
   border-radius: 5px;
   cursor: pointer;
-}
+}   */
 
 
 
@@ -203,3 +203,42 @@ td {
 .table-stats th {
   background-color: gray;
 }
+
+
+/*script*/
+
+
+  .event-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .event-card img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .event-card h2 {
+    margin-top: 10px;
+  }
+
+  .white-background {
+    background-color: #ffffff;
+  }
+  
+  @media (min-width: 768px) {
+   
+    .event-card {
+      
+      flex: 0 0 calc(33.333% - 1rem); /* Espacio entre las tarjetas */
+      max-width: calc(33.333% - 1rem);
+      margin-right: 1rem; /* Espacio entre las tarjetas */
+      margin-bottom: 1rem; /* Espacio entre las filas */
+    }
+  }
+  
+  
+  
