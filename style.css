@@ -1,8 +1,46 @@
 /*----------------------------Header----------------------------------*/
+
+/*----------------------NAVBAR-------------------------*/
+
 .navbar {
   background-color: rgb(216, 220, 198) !important;
 }
 
+.navbar {
+  background-color: #333;
+  padding: 10px 0;
+}
+
+.navbar-brand img {
+  max-width: 100px;
+  height: auto;
+}
+
+.navbar-toggler {
+  border: none;
+  background-color: transparent;
+}
+
+.navbar-toggler-icon {
+  background-color: #fff; /* Color del ícono */
+}
+
+.navbar-collapse {
+  text-align: center;
+}
+
+.navbar-nav {
+  margin-top: 10px;
+}
+
+.navbar-nav .nav-item {
+  margin: 5px 0;
+}
+
+.navbar-brand img {
+  max-width: 200px;
+  height: auto;
+}
 
 /*Boton de pagina actual de otro color*/
 .SoloTexto {
@@ -23,14 +61,28 @@
   text-align: center;
 }
 
-
-
 .btn {
   margin-bottom: 5px;
   background-color: white;
   color: blue;
 
 }
+
+@media screen and (min-width: 769px) {
+  .navbar-brand img {
+      max-width: 1200px; 
+      height: auto;
+      margin-right: 20px; 
+  }
+
+  .navbar-nav .nav-item {
+      margin: 15px 0; /* Aumenta el espaciado vertical entre los botones */
+  }
+}
+
+/*----------------------------Body----------------------------------*/
+
+/*-------------------Carrusel--------------------------*/
 
 .carousel-inner img {
   max-width: 100%;
@@ -73,89 +125,44 @@
   /* Margen superior */
 }
 
-/*----------------------------Body----------------------------------*/
 
-/* body {
-  font-family: Arial, sans-serif;
-  background-color: rgb(244, 245, 241) !important;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
+/*-----------------------*SCRIPT CARDS--------------------------*/
 
-} */
-
-/* .container {
-  background-color: #f5f5f5;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  padding: 20px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-}
-
-.cards-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  max-width: 100%;
-  gap: 20px;
-  /* Agregamos espaciado entre las tarjetas */
-
-/* } */
-
-/* .card {
+.event-card {
   border: 1px solid #ccc;
-  padding: 15px;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
 }
 
-.card img {
+.event-card img {
   max-width: 100%;
-  height: 100%;
-  /* Las imágenes ocuparán todo el espacio vertical disponible */
-  /* object-fit: cover; */
-  /* Las imágenes mantendrán su relación de aspecto y se recortarán si es necesario */
-/* } */
-
-/* .card-content {
-  flex-grow: 1; */
-  /* Permite que el contenido ocupe el espacio restante en la tarjeta */
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  height: auto;
 }
 
-.card-title {
-  font-weight: bold;
-  margin-bottom: 5px;
+.event-card h2 {
+  margin-top: 10px;
 }
 
-.card-description {
-  margin-bottom: 10px;
+.white-background {
+  background-color: #ffffff;
 }
 
-.card-price {
-  font-weight: bold;
-  color: #e53935;
+@media (min-width: 768px) {
+ 
+  .event-card {
+    
+    flex: 0 0 calc(33.333% - 1rem); /* Espacio entre las tarjetas */
+    max-width: calc(33.333% - 1rem);
+    margin-right: 1rem; /* Espacio entre las tarjetas */
+    margin-bottom: 1rem; /* Espacio entre las filas */
+  }
 }
 
-.details-button {
-  background-color: #1976D2;
-  color: #fff;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 5px;
-  cursor: pointer;
-}   */
 
 
-
-/*----------------------------Footer----------------------------------*/
+/*-------------------------------------------Footer-------------------------------------------*/
 .footer {
   font-weight: bold;
   background-color: rgb(216, 220, 198) !important;
@@ -184,19 +191,10 @@
 
 }
 
-/* 
-.table-stats {
- 
-
-  border: 1rem ; 
-  
-} */
 
 .table-stats th,
 td {
   border: 1px solid;
-
-
 
 }
 
@@ -205,40 +203,6 @@ td {
 }
 
 
-/*script*/
 
-
-  .event-card {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 10px;
-    text-align: center;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-  }
-
-  .event-card img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .event-card h2 {
-    margin-top: 10px;
-  }
-
-  .white-background {
-    background-color: #ffffff;
-  }
-  
-  @media (min-width: 768px) {
-   
-    .event-card {
-      
-      flex: 0 0 calc(33.333% - 1rem); /* Espacio entre las tarjetas */
-      max-width: calc(33.333% - 1rem);
-      margin-right: 1rem; /* Espacio entre las tarjetas */
-      margin-bottom: 1rem; /* Espacio entre las filas */
-    }
-  }
-  
   
   
