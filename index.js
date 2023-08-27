@@ -16,11 +16,15 @@ function display(events) {
             <div class="card">
                 <img src="${event.image}" class="card-img-top" alt="Event Image">
                 <div class="card-body">
-                    <h5 class="card-title">${event.name}</h5>
-                    <p class="card-text">${event.date}</p>
+                    <h5 class="card-title text-center">${event.name}</h5>
+                    <p class="card-text">Date: ${event.date}</p>
                     <p class="card-text-description">${truncateText(event.description, 30)}</p>
-                    <a href="#" class="btn btn-primary">More info</a>
-                </div>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <p class="card-text">Price: $ ${event.price}</p>
+                        <a href="#" class="btn btn-primary">Details</a>
+                         
+                      </div>
+                   </div>
             </div>
         `;
 
@@ -28,8 +32,6 @@ function display(events) {
     });
 }
 
-// Ordenar eventos por fecha antes de mostrarlos
-const sortedEvents = data.events.sort((a, b) => new Date(a.date) - new Date(b.date));
 
-// Llamada a la función pasando los eventos ordenados por fecha
+const sortedEvents = data.events.sort((a, b) => new Date(a.date) - new Date(b.date));
 display(sortedEvents);

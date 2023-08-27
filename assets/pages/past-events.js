@@ -25,10 +25,14 @@ function filterPastEvents(events) {
         <div class="card">
           <img src="${event.image}" class="card-img-top" alt="Event Image">
           <div class="card-body">
-            <h5 class="card-title">${event.name}</h5>
+          <h5 class="card-title text-center">${event.name}</h5>
             <p class="card-text">${event.date}</p>
             <p class="card-text-description">${truncateText(event.description, 30)}</p>
-            <a href="#" class="btn btn-primary">More info</a>
+            <div class="d-flex justify-content-between align-items-center">
+                        <p class="card-text">Price: $ ${event.price}</p>
+                        <a href="#" class="btn btn-primary">Details</a>
+                         
+                      </div>
           </div>
         </div>
       `;
