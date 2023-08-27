@@ -1,3 +1,10 @@
+
+function truncateText(text, maxLength) {
+  if (text.length > maxLength) {
+      return text.slice(0, maxLength) + "...";
+  }
+  return text;
+}
 function filterAndSortUpcomingEvents(events) {
     const currentDate = new Date(data.currentDate);
 
@@ -27,7 +34,8 @@ function filterAndSortUpcomingEvents(events) {
           <div class="card-body">
             <h5 class="card-title">${event.name}</h5>
             <p class="card-text">${event.date}</p>
-            <p class="card-text">${event.description}</p>
+            <p class="card-text-description">${truncateText(event.description, 30)}</p>
+            <a href="#" class="btn btn-primary">More info</a>
           </div>
         </div>
       `;

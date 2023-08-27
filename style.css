@@ -31,13 +31,6 @@
   text-align: center;
 }
 
-.navbar-nav {
-  margin-top: 10px;
-}
-
-.navbar-nav .nav-item {
-  margin: 5px 0;
-}
 
 .navbar-brand img {
   max-width: 200px;
@@ -54,21 +47,7 @@
   border-radius: 5px;
 }
 
-.btn-img {
-  width: 30%;
-  border: 0.01px solid black;
-  display: inline-block;
-  border-radius: 10px;
-  padding: 5px;
-  text-align: center;
-}
 
-.btn {
-  margin-bottom: 5px;
-  background-color: white;
-  color: blue;
-
-}
 
 @media screen and (min-width: 769px) {
   .navbar-brand img {
@@ -77,9 +56,7 @@
       margin-right: 20px; 
   }
 
-  .navbar-nav .nav-item {
-      margin: 15px 0; /* Aumenta el espaciado vertical entre los botones */
-  }
+
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -103,7 +80,6 @@
 .carousel-inner img {
   max-width: 100%;
   max-height: 300px;
-  /* Ajusta la altura máxima deseada para las imágenes */
   width: auto;
   height: auto;
 }
@@ -112,7 +88,6 @@
 @media (max-width: 767px) {
   .carousel-inner img {
     height: 200px;
-    /* Ajusta la altura deseada para dispositivos pequeños */
   }
 }
 
@@ -124,55 +99,47 @@
 
 .title {
   font-size: 24px;
-  /* Tamaño de la fuente */
-  color: #333;
-  /* Color del texto */
-  text-align: center;
-  /* Alineación del texto */
-  background-color: #f0f0f0;
-  /* Color de fondo */
+   color: #333;
+    text-align: center;
+   background-color: #f0f0f0;
   padding: 10px;
-  /* Espacio interno alrededor del contenido */
   border: 1px solid #ccc;
-  /* Borde */
-  border-radius: 8px;
-  /* Radio del borde */
-  margin-top: 20px;
-  /* Margen superior */
+    border-radius: 8px;
+    margin-top: 20px;
+  
 }
 
 
 /*-----------------------*SCRIPT CARDS--------------------------*/
 
-.event-card {
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin: 10px;
-  text-align: center;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+.card-img-top {
+  width: 100% !important; /* ancho para que la imagen ocupe todo la tarjeta */
+  height: 200px !important; /*altura de las imágenes */
+  object-fit: cover !important; /* la imagen sin deformarse */
+}
+.card-text {
+  max-height: 80px;
+  overflow: hidden;
+  display: -webkit-box; /* Esto es necesario para algunas versiones de navegadores WebKit */
+  -webkit-box-orient: vertical;
+  word-wrap: break-word; /* Para forzar el corte de palabras en navegadores antiguos */
 }
 
-.event-card img {
-  max-width: 100%;
-  height: auto;
+/* Añadir los puntos suspensivos manualmente */
+.card-text-description::after {
+  content: "...";
+  display: inline;
 }
 
-.event-card h2 {
-  margin-top: 10px;
-}
-
-.white-background {
-  background-color: #ffffff;
-}
 
 @media (min-width: 768px) {
  
   .event-card {
     
-    flex: 0 0 calc(33.333% - 1rem); /* Espacio entre las tarjetas */
+    flex: 0 0 calc(33.333% - 1rem); 
     max-width: calc(33.333% - 1rem);
-    margin-right: 1rem; /* Espacio entre las tarjetas */
-    margin-bottom: 1rem; /* Espacio entre las filas */
+    margin-right: 1rem; 
+    margin-bottom: 1rem;
   }
 }
 
@@ -220,8 +187,8 @@ td {
 
 .contact-form .container {
   max-width: 600px;
-  margin: 20px auto; /* Agrega margen alrededor del formulario */
-  padding: 20px; /* Agrega un poco de espacio interno */
+  margin: 20px auto; 
+  padding: 20px; 
 }
 
   
