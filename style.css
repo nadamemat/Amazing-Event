@@ -3,7 +3,9 @@
 /*----------------------NAVBAR-------------------------*/
 
 .navbar {
-  background-color: rgb(216, 220, 198) !important;
+  
+
+  background-color: rgb(211, 228, 202) !important;
 }
 
 .navbar {
@@ -44,7 +46,7 @@
 
 /*Boton de pagina actual de otro color*/
 .SoloTexto {
-  background-color: rgba(127, 155, 93, 0.89);
+  
   color: white;
   padding: 10px 15px;
   border: 2px solid black;
@@ -77,6 +79,20 @@
 
   .navbar-nav .nav-item {
       margin: 15px 0; /* Aumenta el espaciado vertical entre los botones */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .navbar-brand img {
+    max-width: 100%; 
+    /* height: auto; */
+    padding-left: 2rem;
+  }
+}
+@media (min-width: 1024px) {
+  .navbar-brand img {
+    max-width: 80%; /*  ancho al 100%???? */
+    padding-left: 7rem;
   }
 }
 
@@ -202,7 +218,11 @@ td {
   background-color: gray;
 }
 
-
+.contact-form .container {
+  max-width: 600px;
+  margin: 20px auto; /* Agrega margen alrededor del formulario */
+  padding: 20px; /* Agrega un poco de espacio interno */
+}
 
   
   
