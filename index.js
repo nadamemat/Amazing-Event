@@ -21,7 +21,8 @@ function display(events) {
                     <p class="card-text-description">${truncateText(event.description, 30)}</p>
                       <div class="d-flex justify-content-between align-items-center">
                         <p class="card-text">Price: $ ${event.price}</p>
-                        <a href="#" class="btn btn-primary">Details</a>
+                        <a href="./pages/details.html?eventId=${event._id}" class="btn btn-primary">Details</a>
+
                          
                       </div>
                    </div>
@@ -31,7 +32,9 @@ function display(events) {
         eventContainer.appendChild(eventCard);
     });
 }
-
+function redirectToEventDetails(eventId) {
+    window.location.href = `details.html?eventId=${eventId}`;
+}
 
 const sortedEvents = data.events.sort((a, b) => new Date(a.date) - new Date(b.date));
 display(sortedEvents);
