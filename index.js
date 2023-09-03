@@ -53,6 +53,8 @@ searchForm.addEventListener("submit", function (e) {
     });
 
    
+    //esto es para filtrar el searchbar 
+
     const eventContainer = document.getElementById("event-container");
     eventContainer.innerHTML = "";
 
