@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="/assets/images/favicon.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="../../style.css">
@@ -18,7 +18,7 @@
         <nav class="navbar navbar-expand-md bg-body-tertiary">
             <div class="container">
                 <a class="navbar-brand order-md-1" href="../../index.html">
-                    <img src="../images/amazing_brand.png" alt="Main button">
+                    <img src="/assets/images/amazing_brand.png" alt="Main button">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
@@ -29,21 +29,21 @@
                             <a class="nav-link" href="../../index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../pages/upcoming-events.html">Upcoming Events</a>
+                            <a class="nav-link" href="../assets/pages/upcoming-events.html">Upcoming Events</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../pages/past-events.html">Past Events</a>
+                            <a class="nav-link" href="../assets/pages/past-events.html">Past Events</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../pages/contact.html">Contact</a>
+                            <a class="nav-link" href="../assets/pages/contact.html">Contact</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../pages/stats.html">Stats</a>
+                            <a class="nav-link" href="../assets/pages/stats.html">Stats</a>
                         </li>
                     </ul>
                 </div>
             </div>
-        </nav>>
+        </nav>
 
         <div id="carouselExampleCaptions" class="carousel slide col-12 col-lg-12">
             <div class="carousel-indicators">
@@ -60,35 +60,35 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="../images/optional_banner_5.jpg" class="d-block w-100" alt="mic">
+                    <img src="../assets/images/optional_banner_5.jpg" class="d-block w-100" alt="mic">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Enjoy</h5>
                         <p>Our services are...</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="../images/optional_banner_1.jpg" class="d-block w-100" alt="food">
+                    <img src="../assets/images/optional_banner_1.jpg" class="d-block w-100" alt="food">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Enjoy</h5>
                         <p>Our services are...</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="../images/optional_banner_3.jpg" class="d-block w-100" alt="museo">
+                    <img src="../assets/images/optional_banner_3.jpg" class="d-block w-100" alt="museo">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Enjoy</h5>
                         <p>Our services are...</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="../images/optional_banner_4.jpg" class="d-block w-100" alt="luces">
+                    <img src="../assets/images/optional_banner_4.jpg" class="d-block w-100" alt="luces">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Enjoy</h5>
                         <p>Our services are...</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="../images/optional_banner_2.jpg" class="d-block w-100" alt="chairs">
+                    <img src="../assets/images/optional_banner_2.jpg" class="d-block w-100" alt="chairs">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Enjoy</h5>
                         <p>Our services are...</p>
@@ -144,9 +144,13 @@
     </header>
 
     <main class="container bg-success bg-opacity-25">
-        <div id="event-details" class="container">
-            <!-- Los detalles del evento se mostrarán aquí -->
+        <div class="container">
+            <h1>Event Details</h1>
+            <div id="event-details">
+                <!-- Aquí se mostrarán los detalles del evento -->
+            </div>
         </div>
+        
         <a href="../../index.html"><h2>Press here to back Home</h2></a>
     </main>
     
@@ -158,9 +162,9 @@
 
         <div class="social-links">
 
-            <a href="https://facebook.com"><img src="../images/facebook.png" alt="Facebook"></a>
-            <a href="https://wa.me/1234567890"><img src="../images/whatsapp.png" alt="Twitter"></a>
-            <a href="https://instagram.com"><img src="../images/instagram.png" alt="Instagram"></a>
+            <a href="https://facebook.com"><img src="../assets/images/facebook.png" alt="Facebook"></a>
+            <a href="https://wa.me/1234567890"><img src="../assets/images/whatsapp.png" alt="Twitter"></a>
+            <a href="https://instagram.com"><img src="../assets/images/instagram.png" alt="Instagram"></a>
 
             <p class="text-body-secondary">&copy; 2023 Cohort AP Desarrollo Web 03 TN, Marcos Sagula Inc</p>
 
@@ -180,7 +184,9 @@
 
     </footer>
 
-    <script src="./details.js" type="module"></script>
+    <script src="./assets/pages/cards-data.js" type="module"></script>
+    <script src="./assets/pages/details.js" type="module"></script>
+    <!-- <script src="../pages/details.js" type="module"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
