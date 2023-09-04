@@ -49,7 +49,7 @@ function displayNoEventsImage() {
   const eventContainer = document.getElementById("event-container");
   eventContainer.innerHTML = ""; // Limpiar el contenedor antes de agregar la imagen
 
-  // Agregar la imagen cuando no se encuentren eventos coincidentes
+  
   const noEventsImage = document.createElement("img");
   noEventsImage.src = "../../assets/images/postponed.png";
   noEventsImage.alt = "No se encontraron eventos";

@@ -75,6 +75,31 @@
 
 /*----------------------------Body----------------------------------*/
 
+/*Searchbar y checkboxes*/
+@media (max-width: 1200px) {
+  
+  #search {
+      
+  }
+}
+
+
+@media (max-width: 992px) {
+
+  #search {
+      
+      display: flex;
+      flex-direction: column; 
+      align-items: center; 
+      padding: 10px;
+      padding-left: 10px;
+  }
+  
+  
+  .form-check {
+      margin-bottom: 10px; 
+  }
+}
 
 /*-------------------Carrusel--------------------------*/
 
