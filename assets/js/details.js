@@ -1,4 +1,8 @@
 console.log("El script de details.js se está ejecutando.");
+console.log(data.events)
+
+
+
 
 const eventDetailsContainer = document.getElementById('event-details');
 
