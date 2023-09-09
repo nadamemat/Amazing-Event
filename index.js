@@ -1,4 +1,11 @@
-/*FILTRO Y MUESTRO CARDS PARA SEGUN VAN EN LAS PAGINAS*/
+async function fetchDataFromAPI() {
+    try {
+        const response = await fetch('https://mindhub-xj03.onrender.com/api/amazing');
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+
 
 const sortedEvents = data.events.sort((a, b) => new Date(a.date) - new Date(b.date));
 const currentDate = new Date(data.currentDate);
@@ -20,7 +27,14 @@ if(document.title=="Amazing Events"){
 
 }else{
     display(eventUpcoming)
+    
 }
+} catch (error) {
+    console.error('Error fetching data from API:', error);
+}
+}
+// Llama a la función para obtener los datos de la API
+fetchDataFromAPI();
 
 /*Trunco texto para que no rompa la card*/
 function truncateText(text, maxLength) {

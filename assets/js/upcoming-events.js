@@ -78,6 +78,13 @@
 //   searchForm.addEventListener("submit", handleSearchFormSubmit);
 // });
 
+async function fetchDataFromAPI() {
+    try {
+        const response = await fetch('https://mindhub-xj03.onrender.com/api/amazing');
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
 
 
 
@@ -106,6 +113,12 @@ if (document.title == "Amazing Events") {
 } else {
     display(eventUpcoming);
 }
+} catch (error) {
+    console.error('Error fetching data from API:', error);
+}
+}
+// Llama a la función para obtener los datos de la API
+fetchDataFromAPI();
 
 /*Trunco texto para que no rompa la card*/
 function truncateText(text, maxLength) {

@@ -61,9 +61,11 @@ function pintarCardsEnDetails(evento){
 }
 
 if (document.title == "Details Amazing Events") {
-    const queryString = location.search
+    const queryString = location.search;
     const params = new URLSearchParams(queryString);
     const id = params.get('_id');
-    let arrayFiltrado = data.events.filter((evento) => evento._id == id)
+    let arrayFiltrado = data.events.filter((evento) => evento._id == id);
+    
+    // Utiliza los datos de la API en lugar de los datos locales
     pintarCardsEnDetails(arrayFiltrado[0]);
 }
