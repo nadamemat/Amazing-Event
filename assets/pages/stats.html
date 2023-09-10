@@ -111,7 +111,60 @@
         <h1 class="title">Stats</h1>
     </header>
 
-    <main class="main-table">
+    <main class="container">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td colspan="3">All events statistics</td>
+                    </tr>
+                    <tr>
+                        <td scope="col">Event with the highest percentage of attendance</td>
+                        <td scope="col">Event with the lowest percentage of attendance</td>
+                        <td scope="col">Event with larger capacity</td>
+                    </tr>
+                </thead>
+                <tbody id="all-events">
+
+                </tbody>
+            </table>
+          </div>
+          <div class="table-responsive">
+               <table class="table">
+                <thead>
+                    <tr>
+                        <td colspan="3">Upcoming events statistics</td>
+                    </tr>
+                    <tr>
+                        <td id="pais" scope="col">Categories</td>
+                        <td id="totalC" scope="col">Revenues</td>
+                        <td id="totalR" scope="col">Percentage of attendance</td>
+                    </tr>
+                </thead>
+                <tbody id="upcoming-events">
+
+                </tbody>
+               </table>
+           </div>
+           <div class="table-responsive">
+            <table class="table">
+             <thead>
+                <tr>
+                    <td colspan="3">Past events statistics</td>
+                </tr>
+                 <tr>
+                     <td id="pais" scope="col">Categories</td>
+                     <td id="totalC" scope="col">Revenues</td>
+                     <td id="totalR" scope="col">Percentage of attendance</td>
+                 </tr>
+             </thead>
+             <tbody id="past-events">
+
+             </tbody>
+            </table>
+        </div>
+    </main>
+    <!-- <main class="main-table">
         <table class="table-stats">
             <tr>
                 <th colspan="3">Event: Statistics</th>
@@ -173,7 +226,7 @@
             </tr>
           
         </table>
-    </main>
+    </main> -->
   
 
     <!-- TENGO QUE PONERLE GRID EN MOBILE PARA QUE NO ROMPA SCROLL LATERAL Y NO QUEDE FEO -->
@@ -207,6 +260,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
+        <script src="../js/script.js"></script>
 </body>
 
 </html>

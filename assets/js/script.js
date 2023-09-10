@@ -27,3 +27,36 @@
 
 //   eventContainer.appendChild(card);
 // });
+
+// script.js
+
+// Fetch data from the API
+fetch('https://mindhub-xj03.onrender.com/api/amazing')
+    .then(response => response.json())
+    .then(data => {
+        const table = document.querySelector('.table-stats');
+        
+        // Populate data for "Events with highest % of attendance"
+        const highestAttendanceRow = table.rows[1];
+        highestAttendanceRow.cells[0].textContent = data.highestAttendanceEventName;
+        highestAttendanceRow.cells[1].textContent = `${data.highestAttendance}%`;
+        // Add logic to populate the third cell with appropriate data
+        
+        // Populate data for "Events with lowest % of attendance"
+        const lowestAttendanceRow = table.rows[2];
+        lowestAttendanceRow.cells[0].textContent = data.lowestAttendanceEventName;
+        lowestAttendanceRow.cells[1].textContent = `${data.lowestAttendance}%`;
+        // Add logic to populate the third cell with appropriate data
+        
+        // Populate data for "Events with larger capacity"
+        const largestCapacityRow = table.rows[3];
+        largestCapacityRow.cells[0].textContent = data.largestCapacityEventName;
+        // Add logic to populate the second and third cells with appropriate data
+        
+        // Populate data for "Upcoming events statistics by category"
+        // You can iterate through the data.categories array to populate this section
+        
+        // Populate data for "Past events statistics by category"
+        // You can iterate through the data.pastCategories array to populate this section
+    })
+    .catch(error => console.error('Error fetching data:', error));
