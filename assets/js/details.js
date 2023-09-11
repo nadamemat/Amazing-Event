@@ -1,71 +1,55 @@
-// console.log("El script de details.js se está ejecutando.");
-// console.log(data.events)
+let data = {};
+let evento;
+let id;
+const url = "https://mindhub-xj03.onrender.com/api/amazing"
+fetchData(url);
 
-
-
-
-// const eventDetailsContainer = document.getElementById('event-details');
-
-
-
-// document.addEventListener("DOMContentLoaded", function () {
-//   const urlParams = new URLSearchParams(window.location.search);
-//   const eventId = urlParams.get("eventId");
-
-//   const event = data.events.find((event) => event._id === eventId);
-//   console.log(event)
-
-
-
-
-
-//   if (event) {
+function fetchData(url) {
+  fetch(url)
+    .then(response => response.json())
+    .then(datos => {
+      const queryString = window.location.search;
+      const params = new URLSearchParams(queryString);
+      id = params.get("id");
       
-//       const mainElement = document.querySelector("main");
-//       mainElement.innerHTML = `
-//           <h1>${event.name}</h1>
-//           <img src="${event.image}" alt="${event.name}">
-//           <p>Date: ${event.date}</p>
-//           <p>Description: ${event.description}</p>
-          
-//       `;
-//   } else {
-     
-//       console.error("Evento no encontrado");
-//   }
-// });
+      data = datos;
+      console.log(data);
+      console.log("Id: " + id)
+      evento = data.events.find(event => event._id == id);
 
-
-
-function pintarCardsEnDetails(evento){
-    let container = document.getElementById("exodia");
-    let div = document.createElement("div");
-    div.className = "card";
-    div.style.maxWidth = "70%";
-    div.style.minHeight = "20rem";
-    div.style.padding = "0.5rem";
-    div.innerHTML = `
-    <img src="${evento.image}" class="card-img-top" alt="Event Image">
-    <div class="card-body">
-    <h5 class="card-title text-center">${evento.name}</h5>
-    <p class="card-text">Description: ${evento.description}</p>
-    <p class="card-text">Date: ${evento.date}</p>
-    <p class="card-text">Category: ${evento.category}</p>
-    <p class="card-text">Place: ${evento.place}</p>
-    <p class="card-text">Capacity: ${evento.capacity}</p>
-    <p class="card-text">Assistance: ${evento.assistance}</p>
-    <p class="card-text">Price: ${evento.price}</p>
-    </div>
-    `
-    container.appendChild(div);
+      console.log(evento);
+      
+      if (evento) {
+        displayEventDetails(evento);
+      } else {
+        displayErrorMessage("Event not found.");
+      }
+    });
 }
 
-if (document.title == "Details Amazing Events") {
-    const queryString = location.search;
-    const params = new URLSearchParams(queryString);
-    const id = params.get('_id');
-    let arrayFiltrado = data.events.filter((evento) => evento._id == id);
-    
-    // Utiliza los datos de la API en lugar de los datos locales
-    pintarCardsEnDetails(arrayFiltrado[0]);
+
+
+function displayEventDetails(event) {
+  const divImg = document.getElementById("divImg");
+  const divInfo = document.getElementById("divInfo");
+
+  divImg.innerHTML = `<div>
+    <img src="${event.image}" alt="" class="img-fluid">
+  </div>`;
+
+  divInfo.innerHTML = `<div>
+    <h2 class="card-title mb-3">${event.name}</h2>
+    <p class="card-text">Date: ${event.date}</p>
+    <p class="card-text">Description: ${event.description}</p>
+    <p class="card-text">Category: ${event.category}</p>
+    <p class="card-text">Place: ${event.place}</p>
+    <p class="card-text">Capacity: ${event.capacity}</p>
+    <p class="card-text">Assistance/Estimate: ${event.assistance}</p>
+    <button type="button" class="btn btn-outline-primary" disabled>$${event.price}</button>
+  </div>`;
+}
+
+function displayErrorMessage(message) {
+  const errorContainer = document.getElementById("error-container");
+  errorContainer.textContent = message;
 }
