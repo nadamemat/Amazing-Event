@@ -15,7 +15,7 @@ function fetchData(url) {
       data = datos;
       console.log(data);
       console.log("Id: " + id)
-      evento = data.events.find(event => event._id == id);
+      evento = data.events.find(event => event.id == id);
 
       console.log(evento);
       
