@@ -1,5 +1,9 @@
 /*----------------------------Header----------------------------------*/
+.body {
+  
 
+  background-color: rgb(211, 228, 202) !important;
+}
 /*----------------------NAVBAR-------------------------*/
 
 .navbar {
@@ -226,29 +230,104 @@ input[type="checkbox"]:checked {
 }
 
 /*----------------------------Stats----------------------------------*/
-.main-table {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  min-height: 1vh;
+/* Estilo para la tabla de estadísticas de eventos */
+.table-events {
+  background-color: #f0f0f0; /* Color de fondo */
+}
 
+/* Estilo para las celdas de encabezado de la tabla de estadísticas de eventos */
+.table-events th {
+  background-color: #333; /* Color de fondo del encabezado */
+  color: white; /* Color del texto en el encabezado */
+}
+
+/* Estilo para las celdas de datos en la tabla de estadísticas de eventos */
+.table-events td {
+  background-color: #fff; /* Color de fondo de las celdas de datos */
+}
+
+/* Estilo para la tabla de estadísticas de eventos futuros */
+.table-upcoming-events {
+  background-color: #e0e0e0; /* Color de fondo */
+}
+
+/* Estilo para las celdas de encabezado de la tabla de estadísticas de eventos futuros */
+.table-upcoming-events th {
+  background-color: #666; /* Color de fondo del encabezado */
+  color: white; /* Color del texto en el encabezado */
+}
+
+/* Estilo para las celdas de datos en la tabla de estadísticas de eventos futuros */
+.table-upcoming-events td {
+  background-color: #fff; /* Color de fondo de las celdas de datos */
+}
+
+/* Estilo para la tabla de estadísticas de eventos pasados */
+.table-past-events {
+  background-color: #e0e0e0; /* Color de fondo */
+}
+
+/* Estilo para las celdas de encabezado de la tabla de estadísticas de eventos pasados */
+.table-past-events th {
+  background-color: #666; /* Color de fondo del encabezado */
+  color: white; /* Color del texto en el encabezado */
+}
+
+/* Estilo para las celdas de datos en la tabla de estadísticas de eventos pasados */
+.table-past-events td {
+  background-color: #fff; /* Color de fondo de las celdas de datos */
 }
 
 
-.table-stats th,
-td {
-  border: 1px solid;
 
+
+
+
+
+/* Estilo para la tabla de estadísticas de eventos */
+@media screen and (max-width: 424px) {
+  .table-events,
+  .table-upcoming-events,
+  .table-past-events {
+    font-size: 12px; /* Reducir el tamaño de fuente */
+  }
+
+  /* Truncar valores de celdas de datos en la tabla */
+  .table-events td,
+  .table-upcoming-events td,
+  .table-past-events td {
+    
+    overflow: hidden;
+    text-overflow: ellipsis; /* Mostrar puntos suspensivos cuando se desborda */
+  }
 }
 
-.table-stats th {
-  background-color: gray;
+/* Estilo para las celdas de encabezado de la tabla de estadísticas de eventos */
+.table-events th,
+.table-upcoming-events th,
+.table-past-events th {
+  background-color: #333; /* Color de fondo del encabezado */
+  color: white; /* Color del texto en el encabezado */
+  font-size: 14px; /* Reducir el tamaño de fuente */
 }
 
-.contact-form .container {
-  max-width: 600px;
-  margin: 20px auto; 
-  padding: 20px; 
+/* Estilo para los títulos de las tablas */
+.table-events th.table-secondary,
+.table-upcoming-events th.table-secondary,
+.table-past-events th.table-secondary {
+  font-size: 16px; /* Reducir el tamaño de fuente */
+  font-weight: bold;
 }
 
+/* Eliminar el "by category" en los títulos */
+.table-events th.table-secondary::before,
+.table-upcoming-events th.table-secondary::before,
+.table-past-events th.table-secondary::before {
+  content: ""; /* Eliminar el contenido antes del título */
+}
+  /* Limitar las revenues a 4 dígitos */
+  .table-events td:nth-child(2),
+  .table-upcoming-events td:nth-child(2),
+  .table-past-events td:nth-child(2) {
+    max-width: 80px; /* Ancho máximo para las celdas de revenues */
+  }

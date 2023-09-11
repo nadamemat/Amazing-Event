@@ -12,9 +12,9 @@
     <title>Stats - Amazing Events</title>
 </head>
 
-<body>
+<body style="background-color: rgb(222, 234, 219);">
 
-    <header>
+    <header style="background-color: rgb(222, 234, 219);">
         <nav class="navbar navbar-expand-md bg-body-tertiary">
             <div class="container">
                 <a class="navbar-brand order-md-1" href="../../index.html">
@@ -112,123 +112,62 @@
     </header>
 
     <main class="container">
-        <div class="table-responsive">
-            <table class="table">
+        <div>
+            <table class="table table-hover table-striped table-events">
                 <thead>
                     <tr>
-                        <td colspan="3">All events statistics</td>
+                        <th class="table-secondary ps-3" colspan="3">Events Statistics</th>
                     </tr>
                     <tr>
-                        <td scope="col">Event with the highest percentage of attendance</td>
-                        <td scope="col">Event with the lowest percentage of attendance</td>
-                        <td scope="col">Event with larger capacity</td>
+                        <td class="col-4 text-center" style="font-weight: bold; color: red;">Events with highest % of assistence</td>
+                        <td class="col-4 text-center" style="font-weight: bold; color: red;">Events with lowest % of assistence</td>
+                        <td class="col-4 text-center" style="font-weight: bold; color: red;">Events with larger capacity</td>
                     </tr>
                 </thead>
-                <tbody id="all-events">
-
+                <tbody>
+                    <tr id="eventsStatistics">
+                
+                    </tr>
                 </tbody>
             </table>
-          </div>
-          <div class="table-responsive">
-               <table class="table">
+            <table class="table table-hover table-striped table-upcoming-events">
                 <thead>
                     <tr>
-                        <td colspan="3">Upcoming events statistics</td>
+                        <th class="table-secondary ps-3" colspan="3">Upcoming events statistics by category</th>
                     </tr>
                     <tr>
-                        <td id="pais" scope="col">Categories</td>
-                        <td id="totalC" scope="col">Revenues</td>
-                        <td id="totalR" scope="col">Percentage of attendance</td>
+                        <td class="col-4 text-center text" style="font-weight: bold; color: red;">Categories</td>
+                        <td class="col-4 text-center" style="font-weight: bold; color: red;">Revenues</td>
+                        <td class="col-4 text-center" style="font-weight: bold; color: red;">Percentage of assistance</d>
                     </tr>
                 </thead>
-                <tbody id="upcoming-events">
-
+                <tbody id="upcomingEventsStatistics">
+                    
                 </tbody>
-               </table>
-           </div>
-           <div class="table-responsive">
-            <table class="table">
-             <thead>
-                <tr>
-                    <td colspan="3">Past events statistics</td>
-                </tr>
-                 <tr>
-                     <td id="pais" scope="col">Categories</td>
-                     <td id="totalC" scope="col">Revenues</td>
-                     <td id="totalR" scope="col">Percentage of attendance</td>
-                 </tr>
-             </thead>
-             <tbody id="past-events">
-
-             </tbody>
             </table>
+            <table class="table table-hover table-striped table-past-events">
+                <thead class="">
+                    <tr>
+                        <th class="table-secondary ps-3" colspan="3">Past events statistics by category</th>
+                    </tr>
+                    <tr>
+                        <td class="col-4 text-center" style="font-weight: bold; color: red;">Categories</td>
+                        <td class="col-4 text-center" style="font-weight: bold; color: red;">Revenues</td>
+                        <td class="col-4 text-center" style="font-weight: bold; color: red;">Percentage of assistance</td>
+                    </tr>
+                </thead>
+                <tbody id="pastEventsStatistics">
+                    
+                </tbody>
+            </table>
+
         </div>
-    </main>
-    <!-- <main class="main-table">
-        <table class="table-stats">
-            <tr>
-                <th colspan="3">Event: Statistics</th>
-            </tr>
-            <tr>
-                <td>Events with highest % of attendance</td>
-                <td>Events with lowest % of attendance</td>
-                <td>Events with larger capacity</td>
-            </tr>
-            
-            <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-            </tr>
-            
-           
-            <tr>
-                <th colspan="3">Upcoming events statistics by category</th>
-            </tr>
-            <tr>
-                <td>Categories</td>
-                <td>Revenues</td>
-                <td>Percentage of assistance</td>
-            </tr>
-         
-            <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-            </tr>
-            
-            <tr>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
-            </tr>
-           
-           
-            <tr>
-                <th colspan="3">Past events statistics by category</th>
-            </tr>
-            <tr>
-                <td>Categories</td>
-                <td>Revenues</td>
-                <td>Percentage of assistance</td>
-            </tr>
-           
-            <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-            </tr>
-            
-            <tr>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
-            </tr>
-          
-        </table>
-    </main> -->
-  
 
+
+    </main>
+
+    
+  
     <!-- TENGO QUE PONERLE GRID EN MOBILE PARA QUE NO ROMPA SCROLL LATERAL Y NO QUEDE FEO -->
     <footer class="footer">
 
@@ -260,7 +199,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
-        <script src="../js/script.js"></script>
+        <script src="../js/statistics.js"></script>
 </body>
 
 </html>
