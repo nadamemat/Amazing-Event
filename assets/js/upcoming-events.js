@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         <p class="card-text-description">${truncateText(event.description, 30)}</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <p class="card-text">Price: $ ${event.price}</p>
-                            <a href="./assets/pages/details.html?_id=${event._id}" class="btn btn-primary">Details</a>
+                            <a href="./details.html?_id=${event._id}" class="btn btn-primary">Details</a>
                         </div>
                     </div>
                 </div>

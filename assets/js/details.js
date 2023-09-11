@@ -10,20 +10,17 @@ function fetchData(url) {
     .then(datos => {
       const queryString = window.location.search;
       const params = new URLSearchParams(queryString);
-      id = params.get("id");
+      id = params.get("_id");
       
       data = datos;
       console.log(data);
       console.log("Id: " + id)
-      evento = data.events.find(event => event.id == id);
+      evento = data.events.find(event => event._id == id);
 
       console.log(evento);
-      
-      if (evento) {
-        displayEventDetails(evento);
-      } else {
-        displayErrorMessage("Event not found.");
-      }
+     
+      displayEventDetails(evento);
+   
     });
 }
 
