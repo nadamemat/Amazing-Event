@@ -9,7 +9,7 @@
 .navbar {
   
 
-  background-color: rgb(211, 228, 202) !important;
+  background-color: rgb(222, 234, 219) !important;
 }
 
 .navbar {
@@ -87,7 +87,7 @@
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Establece un número mínimo de 200px por columna y permite que se ajusten automáticamente al espacio disponible */
   gap: 10px; /* Espacio entre elementos */
   align-items: center; /* Centra los elementos verticalmente */
-  background-color: rgb(216, 220, 198) !important;
+ 
 }
 
 #searchInput {
@@ -137,8 +137,36 @@ input[type="checkbox"]:checked {
   background-color: #c82333;
 }
 
+/* Estilo para los checkboxes en pantallas pequeñas (hasta 424px) */
+@media screen and (max-width: 424px) {
+  .search {
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* Dos columnas */
+  }
 
+  /* Estilo para los textos de los checkboxes */
+  label {
+    font-size: 14px; /* Reducir el tamaño del texto */
+  }
+}
+/* Estilo para los checkboxes en todas las resoluciones */
+label {
+  display: flex;
+  align-items: center;
+  margin-left: 10px; /* Agrega margen izquierdo */
+  font-size: 16px; /* Tamaño de texto normal */
+}
 
+/* Estilo para los checkboxes en pantallas pequeñas (hasta 424px) */
+@media screen and (max-width: 424px) {
+  .search {
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* Dos columnas */
+  }
+
+  /* Estilo para los textos de los checkboxes */
+  label {
+    font-size: 14px; /* Reducir el tamaño del texto */
+  }
+}
 
 /*-------------------Carrusel--------------------------*/
 
@@ -159,7 +187,7 @@ input[type="checkbox"]:checked {
 .search {
   display: grid;
   justify-content: center;
-  background-color: rgb(216, 220, 198) !important;
+  background-color: rgb(222, 234, 219) !important;
 }
 
 .title {
@@ -172,6 +200,22 @@ input[type="checkbox"]:checked {
     border-radius: 8px;
     margin-top: 20px;
   
+}
+
+.reset {
+  justify-self: end; /* Mueve el botón a la derecha */
+}
+
+/* Estilo para los checkboxes en pantallas pequeñas (hasta 767px) */
+@media screen and (max-width: 767px) {
+
+
+  .reset {
+    justify-self: right; /* Centrar el botón en pantallas pequeñas */
+    margin-left: 10rem;
+  }
+
+
 }
 
 
@@ -213,7 +257,7 @@ input[type="checkbox"]:checked {
 /*-------------------------------------------Footer-------------------------------------------*/
 .footer {
   font-weight: bold;
-  background-color: rgb(216, 220, 198) !important;
+  background-color: rgb(222, 234, 219) !important;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -331,3 +375,4 @@ input[type="checkbox"]:checked {
   .table-past-events td:nth-child(2) {
     max-width: 80px; /* Ancho máximo para las celdas de revenues */
   }
+
